@@ -11,6 +11,29 @@ namespace Conteggio_voti
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Vuoi Registrati? (y/n) \n");
+            string resp = Console.ReadLine();
+            Utente utente = new Utente();
+            Console.WriteLine("Inserisci email: ");
+            string email = Console.ReadLine();
+            utente.SetEmail(email);
+            Console.WriteLine("Inserisci password: ");
+            string password = Console.ReadLine();
+            utente.SetPassword(password);
+
+            do
+            {
+                Console.WriteLine("Effettua login");
+                Console.WriteLine("Email: ");
+                email = Console.ReadLine();
+                Console.WriteLine("Password: ");
+                password = Console.ReadLine();
+                Console.WriteLine(utente.Login(email, password));
+            }
+            while (!utente.isLoggedIn);
+            
+
+
             int opzione1 = 0;
             int opzione2 = 0;
             int opzione3 = 0;
