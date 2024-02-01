@@ -11,7 +11,7 @@ namespace Conteggio_voti
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Vuoi Registrati? (y/n) \n");
+            Console.WriteLine("Vuoi Registrati? (y/n) \n");     // programma completo
             string resp = Console.ReadLine();
             Utente utente = new Utente();
             Console.WriteLine("Inserisci email: ");
